@@ -7,7 +7,7 @@ acs.init = () => {
   const wrapper = document.querySelector(".wrapper");
   wrapper.innerHTML = structureOfPage.render();
   const header = document.querySelector(".header");
-  header.innerHTML = ` ${headerStr.renderLogo()} ${headerStr.renderNav()}`;
+  header.innerHTML = ` ${headerStr.renderLogo()} ${headerStr.renderNav()} ${headerStr.renderAccountIcon()}`;
 };
 
 acs.init();

@@ -15,3 +15,10 @@ export function createNavigation(menuItem) {
       </div>
     </nav>`;
 }
+
+export function createAccountIcon() {
+  return `
+  <a class="account_icon" href="#">
+    <img class="account_icon_img" src="../img/account_icon.png" alt="logo">
+  </a>`;
+}

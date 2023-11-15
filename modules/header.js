@@ -1,4 +1,8 @@
-import { createLogo, createNavigation } from "../templates/header.js";
+import {
+  createLogo,
+  createNavigation,
+  createAccountIcon,
+} from "../templates/header.js";
 
 const menuItems = ["Home", "Classes", "Teachers", "Students"];
 
@@ -16,4 +20,6 @@ const renderNav = () => {
   return createNavigation(navigationContent);
 };
 
-export default { renderLogo, renderNav };
+const renderAccountIcon = createAccountIcon;
+
+export default { renderLogo, renderNav, renderAccountIcon };
