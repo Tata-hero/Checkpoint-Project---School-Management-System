@@ -6,8 +6,8 @@ const acs = {};
 acs.init = () => {
   const wrapper = document.querySelector(".wrapper");
   wrapper.innerHTML = structureOfPage.render();
-  const header = document.querySelector(".header");
-  header.innerHTML = ` ${headerStr.renderLogo()} ${headerStr.renderNav()} ${headerStr.renderAccountIcon()}`;
+  const headerContainer = document.querySelector(".header>.container");
+  headerContainer.innerHTML = ` ${headerStr.renderLogo()} ${headerStr.renderNav()} ${headerStr.renderAccountIcon()}`;
 };
 
 acs.init();

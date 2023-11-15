@@ -12,8 +12,8 @@ const renderNav = () => {
   const navigationContent = menuItems
     .map(
       (menuItem) => `
-      <li class="menu_item">
-        <a href="#" class="menu_link"> ${menuItem}</a>
+      <li class="menu_list-item">
+        <a href="#" class="menu_list-link"> ${menuItem}</a>
       </li>`
     )
     .join("");
