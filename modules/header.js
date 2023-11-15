@@ -1,8 +1,10 @@
-import { createNavigation } from "../templates/header.js";
+import { createLogo, createNavigation } from "../templates/header.js";
 
 const menuItems = ["Home", "Classes", "Teachers", "Students"];
 
-const render = () => {
+const renderLogo = createLogo;
+
+const renderNav = () => {
   const navigationContent = menuItems
     .map(
       (menuItem) => `
@@ -14,6 +16,4 @@ const render = () => {
   return createNavigation(navigationContent);
 };
 
-export default {
-  render,
-};
+export default { renderLogo, renderNav };
