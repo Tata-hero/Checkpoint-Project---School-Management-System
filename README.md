@@ -11,10 +11,9 @@ Under Development
 ## Plan
 
 1. Interface development
-   - [ ] Create a Home page
-   - [ ] Create a Classes page
-   - [ ] Create a Teachers page
-   - [ ] Create a Students page
+   - [ ] Create a header
+   - [ ] Create a main part
+   - [ ] Create a footer
 2. Add Interactivity with JavaScript
 3. Optimization for Mobile Devices
 
