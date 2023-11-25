@@ -17,7 +17,6 @@ export default function createSignInModalForButton() {
                       type="text"
                       class="form-control"
                       id="firstName"
-                      placeholder="First Name"
                     />
                   </div>
                   <div class="col-6">
@@ -26,7 +25,6 @@ export default function createSignInModalForButton() {
                       type="text"
                       class="form-control"
                       id="lastName"
-                      placeholder="Last Name"
                     />
                   </div>
                 </div>
@@ -36,7 +34,6 @@ export default function createSignInModalForButton() {
                     type="email"
                     class="form-control"
                     id="email"
-                    placeholder="Email"
                   />
                 </div>
                 <div class="mt-3">

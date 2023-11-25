@@ -16,9 +16,9 @@ export default function createNavbar() {
         </div>
       </div>
       <div>
-        <button type="button" class="btn btn-primary me-4 custom-icon-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+        <a href="#" class="text-dark fs-1 me-5" data-bs-toggle="modal" data-bs-target="#loginModal">
           <i class="bi bi-person-circle"></i> 
-        </button>
+        </a>
       </div>
     </nav>
     `;
