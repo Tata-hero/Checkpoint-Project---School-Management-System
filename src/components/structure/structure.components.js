@@ -1,5 +1,8 @@
-import structureOfPage from "../templates/structure.js";
+import structureOfPage from "./structure.template.js";
 
-export default {
-  render: structureOfPage,
-};
+function init() {
+  const wrapper = document.querySelector(".wrapper");
+  wrapper.innerHTML = structureOfPage();
+}
+
+export default { init };
