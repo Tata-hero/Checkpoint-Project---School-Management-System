@@ -1,5 +1,5 @@
-import structureOfPage from "./modules/structure.js";
-import headerStr from "./modules/header.js";
+import structureOfPage from "../modules/structure.js";
+import headerStr from "../header/header.component.js";
 
 const acs = {};
 

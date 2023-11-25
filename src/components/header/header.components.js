@@ -2,7 +2,7 @@ import {
   createLogo,
   createNavigation,
   createAccountIcon,
-} from "../templates/header.js";
+} from "./header.template.js";
 
 const menuItems = ["Home", "Classes", "Teachers", "Students"];
 
