@@ -1,8 +1,20 @@
 import structureOfPage from "./structure.template.js";
 
 function init() {
-  const wrapper = document.querySelector(".wrapper");
-  wrapper.innerHTML = structureOfPage();
+  getElement().innerHTML = structureOfPage();
 }
 
-export default { init };
+function addNavbar(contentNavbar) {
+  const headerPart = document.querySelector(".header");
+  headerPart.innerHTML = contentNavbar;
+}
+
+function addSignInModal(contentModal) {
+  getElement().insertAdjacentHTML("afterend", contentModal);
+}
+
+function getElement() {
+  return document.querySelector(".wrapper");
+}
+
+export default { init, addNavbar, addSignInModal };
