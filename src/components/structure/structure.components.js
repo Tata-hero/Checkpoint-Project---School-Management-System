@@ -13,8 +13,13 @@ function addSignInModal(contentModal) {
   getElement().insertAdjacentHTML("afterend", contentModal);
 }
 
+function addFooter(contentFooter) {
+  const footerPart = document.querySelector(".footer");
+  footerPart.innerHTML = contentFooter;
+}
+
 function getElement() {
   return document.querySelector(".wrapper");
 }
 
-export default { init, addNavbar, addSignInModal };
+export default { init, addNavbar, addSignInModal, addFooter };
