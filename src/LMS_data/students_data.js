@@ -2,7 +2,7 @@ const studentsData = [
   {
     id: S1,
     name: "Alice Johnson",
-    course: "Fullstack Web Programming",
+    class: "Fullstack Web Programming",
     subjects: [
       { name: "JavaScript Fundamentals", grade: 4 },
       { name: "HTML and CSS Basics", grade: 4 },
@@ -12,7 +12,7 @@ const studentsData = [
   {
     id: S2,
     name: "Bob Smith",
-    course: "AWS Cloud Engineering",
+    class: "AWS Cloud Engineering",
     subjects: [
       { name: "Introduction to AWS Services", grade: 5 },
       { name: "Cloud Security", grade: 4 },
@@ -22,7 +22,7 @@ const studentsData = [
   {
     id: S3,
     name: "Charlie Brown",
-    course: "Software Testing",
+    class: "Software Testing",
     subjects: [
       { name: "Testing Methodologies", grade: 6 },
       { name: "Automated Testing with Selenium", grade: 5 },
@@ -32,7 +32,7 @@ const studentsData = [
   {
     id: S4,
     name: "David White",
-    course: "Fullstack Web Programming",
+    class: "Fullstack Web Programming",
     subjects: [
       { name: "JavaScript Fundamentals", grade: 5 },
       { name: "HTML and CSS Basics", grade: 5 },
@@ -42,7 +42,7 @@ const studentsData = [
   {
     id: S5,
     name: "Eva Rodriguez",
-    course: "AWS Cloud Engineering",
+    class: "AWS Cloud Engineering",
     subjects: [
       { name: "Introduction to AWS Services", grade: 6 },
       { name: "Cloud Security", grade: 6 },
@@ -52,7 +52,7 @@ const studentsData = [
   {
     id: S6,
     name: "Frank Thomas",
-    course: "Software Testing",
+    class: "Software Testing",
     subjects: [
       { name: "Testing Methodologies", grade: 5 },
       { name: "Automated Testing with Selenium", grade: 6 },
@@ -62,7 +62,7 @@ const studentsData = [
   {
     id: S7,
     name: "Grace Lee",
-    course: "Fullstack Web Programming",
+    class: "Fullstack Web Programming",
     subjects: [
       { name: "JavaScript Fundamentals", grade: 6 },
       { name: "HTML and CSS Basics", grade: 5 },
@@ -72,7 +72,7 @@ const studentsData = [
   {
     id: S8,
     name: "Henry Wang",
-    course: "AWS Cloud Engineering",
+    class: "AWS Cloud Engineering",
     subjects: [
       { name: "Introduction to AWS Services", grade: 4 },
       { name: "Cloud Security", grade: 5 },
@@ -82,7 +82,7 @@ const studentsData = [
   {
     id: S9,
     name: "Ivy Chen",
-    course: "Software Testing",
+    class: "Software Testing",
     subjects: [
       { name: "Testing Methodologies", grade: 6 },
       { name: "Automated Testing with Selenium", grade: 5 },
@@ -92,7 +92,7 @@ const studentsData = [
   {
     id: S10,
     name: "Jack Martin",
-    course: "Fullstack Web Programming",
+    class: "Fullstack Web Programming",
     subjects: [
       { name: "JavaScript Fundamentals", grade: 3 },
       { name: "HTML and CSS Basics", grade: 5 },
@@ -102,7 +102,7 @@ const studentsData = [
   {
     id: S11,
     name: "Karen Anderson",
-    course: "AWS Cloud Engineering",
+    class: "AWS Cloud Engineering",
     subjects: [
       { name: "Introduction to AWS Services", grade: 5 },
       { name: "Cloud Security", grade: 4 },
@@ -112,7 +112,7 @@ const studentsData = [
   {
     id: S12,
     name: "Leo Garcia",
-    course: "Software Testing",
+    class: "Software Testing",
     subjects: [
       { name: "Testing Methodologies", grade: 4 },
       { name: "Automated Testing with Selenium", grade: 4 },
@@ -122,7 +122,7 @@ const studentsData = [
   {
     id: S13,
     name: "Mia Wilson",
-    course: "Fullstack Web Programming",
+    class: "Fullstack Web Programming",
     subjects: [
       { name: "JavaScript Fundamentals", grade: 4 },
       { name: "HTML and CSS Basics", grade: 5 },
@@ -132,7 +132,7 @@ const studentsData = [
   {
     id: S14,
     name: "Nathan Brown",
-    course: "AWS Cloud Engineering",
+    class: "AWS Cloud Engineering",
     subjects: [
       { name: "Introduction to AWS Services", grade: 6 },
       { name: "Cloud Security", grade: 5 },
@@ -142,7 +142,7 @@ const studentsData = [
   {
     id: S15,
     name: "Olivia Taylor",
-    course: "Software Testing",
+    class: "Software Testing",
     subjects: [
       { name: "Testing Methodologies", grade: 5 },
       { name: "Automated Testing with Selenium", grade: 6 },
@@ -152,7 +152,7 @@ const studentsData = [
   {
     id: S16,
     name: "Peter Martinez",
-    course: "Fullstack Web Programming",
+    class: "Fullstack Web Programming",
     subjects: [
       { name: "JavaScript Fundamentals", grade: 4 },
       { name: "HTML and CSS Basics", grade: 4 },
@@ -162,7 +162,7 @@ const studentsData = [
   {
     id: S17,
     name: "Quinn Nguyen",
-    course: "AWS Cloud Engineering",
+    class: "AWS Cloud Engineering",
     subjects: [
       { name: "Introduction to AWS Services", grade: 4 },
       { name: "Cloud Security", grade: 6 },
@@ -172,7 +172,7 @@ const studentsData = [
   {
     id: S18,
     name: "Rachel Turner",
-    course: "Software Testing",
+    class: "Software Testing",
     subjects: [
       { name: "Testing Methodologies", grade: 6 },
       { name: "Automated Testing with Selenium", grade: 3 },
@@ -182,7 +182,7 @@ const studentsData = [
   {
     id: S19,
     name: "Samuel Wright",
-    course: "Fullstack Web Programming",
+    class: "Fullstack Web Programming",
     subjects: [
       { name: "JavaScript Fundamentals", grade: 4 },
       { name: "HTML and CSS Basics", grade: 5 },
@@ -192,7 +192,7 @@ const studentsData = [
   {
     id: S20,
     name: "Tina Adams",
-    course: "AWS Cloud Engineering",
+    class: "AWS Cloud Engineering",
     subjects: [
       { name: "Introduction to AWS Services", grade: 6 },
       { name: "Cloud Security", grade: 5 },
