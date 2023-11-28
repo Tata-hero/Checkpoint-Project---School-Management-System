@@ -201,4 +201,4 @@ const studentsData = [
   },
 ];
 
-console.log(studentsData.length);
+export default studentsData;
