@@ -8,10 +8,10 @@ export default function createNavbar() {
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-5 fs-5">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Classes</a>
-            <a class="nav-link" href="#">Teachers</a>
-            <a class="nav-link" href="#">Students</a>
+            <a class="nav-link" id="menu-home" aria-current="page" href="#">Home</a>
+            <a class="nav-link" id="menu-classes" href="#">Classes</a>
+            <a class="nav-link" id="menu-teachers" href="#">Teachers</a>
+            <a class="nav-link" id="menu-students" href="#">Students</a>
           </div>
         </div>
       </div>

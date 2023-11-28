@@ -1,16 +1,28 @@
 import structureOfPage from "./structure.template.js";
+import pagesContent from "../content.js";
 
 function init() {
   getElement().innerHTML = structureOfPage();
 }
 
 function addNavbar(contentNavbar) {
-  const headerPart = document.querySelector(".header");
-  headerPart.innerHTML = contentNavbar;
+  getElementHeader().innerHTML = contentNavbar;
 }
 
 function addSignInModal(contentModal) {
   getElement().insertAdjacentHTML("afterend", contentModal);
+}
+
+function addEventListener() {
+  getElementHeader().addEventListener("click", function (event) {
+    switch (event.target.id) {
+      case "menu-home":
+        pagesContent.homePage();
+        break;
+      default:
+        console.log("this page is not created yet.");
+    }
+  });
 }
 
 function addFooter(contentFooter) {
@@ -22,4 +34,8 @@ function getElement() {
   return document.querySelector(".wrapper");
 }
 
-export default { init, addNavbar, addSignInModal, addFooter };
+function getElementHeader() {
+  return document.querySelector(".header");
+}
+
+export default { init, addNavbar, addSignInModal, addFooter, addEventListener };

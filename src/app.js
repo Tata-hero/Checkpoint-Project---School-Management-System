@@ -9,6 +9,7 @@ acs.init = () => {
   structureOfPage.init();
   structureOfPage.addNavbar(navbar.render());
   structureOfPage.addSignInModal(signInModal.render());
+  structureOfPage.addEventListener();
   structureOfPage.addFooter(footer.render());
 };
 
