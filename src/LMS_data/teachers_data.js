@@ -1,16 +1,16 @@
 const teachersData = [
   {
-    id: T1,
+    id: "T1",
     name: "John Smith",
     class: "Fullstack Web Programming",
   },
   {
-    id: T2,
+    id: "T2",
     name: "Emily Johnson",
     class: "AWS Cloud Engineering",
   },
   {
-    id: T3,
+    id: "T3",
     name: "Michael Davis",
     class: "Software Testing",
   },

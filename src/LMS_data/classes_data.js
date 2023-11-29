@@ -15,3 +15,5 @@ const classesData = [
     teacher: { id: "T3", name: "Michael Davis" },
   },
 ];
+
+export default classesData;

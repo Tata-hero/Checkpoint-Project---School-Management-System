@@ -1,6 +1,6 @@
 const studentsData = [
   {
-    id: S1,
+    id: "S1",
     name: "Alice Johnson",
     class: "Fullstack Web Programming",
     subjects: [
@@ -10,7 +10,7 @@ const studentsData = [
     ],
   },
   {
-    id: S2,
+    id: "S2",
     name: "Bob Smith",
     class: "AWS Cloud Engineering",
     subjects: [
@@ -20,7 +20,7 @@ const studentsData = [
     ],
   },
   {
-    id: S3,
+    id: "S3",
     name: "Charlie Brown",
     class: "Software Testing",
     subjects: [
@@ -30,7 +30,7 @@ const studentsData = [
     ],
   },
   {
-    id: S4,
+    id: "S4",
     name: "David White",
     class: "Fullstack Web Programming",
     subjects: [
@@ -40,7 +40,7 @@ const studentsData = [
     ],
   },
   {
-    id: S5,
+    id: "S5",
     name: "Eva Rodriguez",
     class: "AWS Cloud Engineering",
     subjects: [
@@ -50,7 +50,7 @@ const studentsData = [
     ],
   },
   {
-    id: S6,
+    id: "S6",
     name: "Frank Thomas",
     class: "Software Testing",
     subjects: [
@@ -60,7 +60,7 @@ const studentsData = [
     ],
   },
   {
-    id: S7,
+    id: "S7",
     name: "Grace Lee",
     class: "Fullstack Web Programming",
     subjects: [
@@ -70,7 +70,7 @@ const studentsData = [
     ],
   },
   {
-    id: S8,
+    id: "S8",
     name: "Henry Wang",
     class: "AWS Cloud Engineering",
     subjects: [
@@ -80,7 +80,7 @@ const studentsData = [
     ],
   },
   {
-    id: S9,
+    id: "S9",
     name: "Ivy Chen",
     class: "Software Testing",
     subjects: [
@@ -90,7 +90,7 @@ const studentsData = [
     ],
   },
   {
-    id: S10,
+    id: "S10",
     name: "Jack Martin",
     class: "Fullstack Web Programming",
     subjects: [
@@ -100,7 +100,7 @@ const studentsData = [
     ],
   },
   {
-    id: S11,
+    id: "S11",
     name: "Karen Anderson",
     class: "AWS Cloud Engineering",
     subjects: [
@@ -110,7 +110,7 @@ const studentsData = [
     ],
   },
   {
-    id: S12,
+    id: "S12",
     name: "Leo Garcia",
     class: "Software Testing",
     subjects: [
@@ -120,7 +120,7 @@ const studentsData = [
     ],
   },
   {
-    id: S13,
+    id: "S13",
     name: "Mia Wilson",
     class: "Fullstack Web Programming",
     subjects: [
@@ -130,7 +130,7 @@ const studentsData = [
     ],
   },
   {
-    id: S14,
+    id: "S14",
     name: "Nathan Brown",
     class: "AWS Cloud Engineering",
     subjects: [
@@ -140,7 +140,7 @@ const studentsData = [
     ],
   },
   {
-    id: S15,
+    id: "S15",
     name: "Olivia Taylor",
     class: "Software Testing",
     subjects: [
@@ -150,7 +150,7 @@ const studentsData = [
     ],
   },
   {
-    id: S16,
+    id: "S16",
     name: "Peter Martinez",
     class: "Fullstack Web Programming",
     subjects: [
@@ -160,7 +160,7 @@ const studentsData = [
     ],
   },
   {
-    id: S17,
+    id: "S17",
     name: "Quinn Nguyen",
     class: "AWS Cloud Engineering",
     subjects: [
@@ -170,7 +170,7 @@ const studentsData = [
     ],
   },
   {
-    id: S18,
+    id: "S18",
     name: "Rachel Turner",
     class: "Software Testing",
     subjects: [
@@ -180,7 +180,7 @@ const studentsData = [
     ],
   },
   {
-    id: S19,
+    id: "S19",
     name: "Samuel Wright",
     class: "Fullstack Web Programming",
     subjects: [
@@ -190,7 +190,7 @@ const studentsData = [
     ],
   },
   {
-    id: S20,
+    id: "S20",
     name: "Tina Adams",
     class: "AWS Cloud Engineering",
     subjects: [
