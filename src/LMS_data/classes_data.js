@@ -1,18 +1,24 @@
 const classesData = [
   {
-    id: "C1",
-    name: "Fullstack Web Programming",
+    id: "1",
+    className: "Fullstack Web Programming",
     teacher: { id: "T1", name: "John Smith" },
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
-    id: "C2",
-    name: "AWS Cloud Engineering",
+    id: "2",
+    className: "AWS Cloud Engineering",
     teacher: { id: "T2", name: "Emily Johnson" },
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.",
   },
   {
-    id: "C3",
-    name: "Software Testing",
+    id: "3",
+    className: "Software Testing",
     teacher: { id: "T3", name: "Michael Davis" },
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.",
   },
 ];
 

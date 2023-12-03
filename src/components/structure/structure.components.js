@@ -19,6 +19,9 @@ function addEventListener() {
       case "menu-home":
         pagesContent.homePage();
         break;
+      case "menu-classes":
+        pagesContent.classesPage();
+        break;
       default:
         console.log("this page is not created yet.");
     }

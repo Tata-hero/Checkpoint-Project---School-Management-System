@@ -2,6 +2,7 @@ import homePageTemplate from "../pages/home.js";
 import studentsData from "../LMS_data/students_data.js";
 import teachersData from "../LMS_data/teachers_data.js";
 import classesData from "../LMS_data/classes_data.js";
+import classesPageTemplate from "../pages/classes.js";
 
 function homePage() {
   render(homePageTemplate());
@@ -25,11 +26,33 @@ function countClasses() {
   classesCounter.innerHTML = classesData.length.toString();
 }
 
+function classesCards() {
+  return classesData
+    .map((data) => classesPageTemplate.createClassesPage(data))
+    .join("");
+}
+
+function classesPage() {
+  const classesHeadingTemplate = classesPageTemplate.createClassesHeading();
+  const classesAddBtn = classesPageTemplate.createAddButton();
+
+  const classesRowTemplate = classesPageTemplate.createClassesRow(
+    classesCards()
+  );
+
+  const classesContainerTemplate = classesPageTemplate.createClassesContainer(
+    classesHeadingTemplate + classesRowTemplate + classesAddBtn
+  );
+
+  render(classesContainerTemplate);
+}
+
 function render(content) {
   document.querySelector(".main").innerHTML = content;
 }
 
 export default {
   homePage,
+  classesPage,
   render,
 };
