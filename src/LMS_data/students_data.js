@@ -8,6 +8,8 @@ const studentsData = [
       { name: "HTML and CSS Basics", grade: 4 },
       { name: "Responsive Web Design", grade: 6 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S2",
@@ -18,6 +20,8 @@ const studentsData = [
       { name: "Cloud Security", grade: 4 },
       { name: "Serverless Architecture", grade: 6 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S3",
@@ -28,6 +32,8 @@ const studentsData = [
       { name: "Automated Testing with Selenium", grade: 5 },
       { name: "Performance Testing", grade: 5 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S4",
@@ -38,6 +44,8 @@ const studentsData = [
       { name: "HTML and CSS Basics", grade: 5 },
       { name: "Responsive Web Design", grade: 5 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S5",
@@ -48,6 +56,8 @@ const studentsData = [
       { name: "Cloud Security", grade: 6 },
       { name: "Serverless Architecture", grade: 4 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S6",
@@ -58,6 +68,8 @@ const studentsData = [
       { name: "Automated Testing with Selenium", grade: 6 },
       { name: "Performance Testing", grade: 4 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S7",
@@ -68,6 +80,8 @@ const studentsData = [
       { name: "HTML and CSS Basics", grade: 5 },
       { name: "Responsive Web Design", grade: 4 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S8",
@@ -78,6 +92,8 @@ const studentsData = [
       { name: "Cloud Security", grade: 5 },
       { name: "Serverless Architecture", grade: 4 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S9",
@@ -88,6 +104,8 @@ const studentsData = [
       { name: "Automated Testing with Selenium", grade: 5 },
       { name: "Performance Testing", grade: 3 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S10",
@@ -98,6 +116,8 @@ const studentsData = [
       { name: "HTML and CSS Basics", grade: 5 },
       { name: "Responsive Web Design", grade: 5 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S11",
@@ -108,6 +128,8 @@ const studentsData = [
       { name: "Cloud Security", grade: 4 },
       { name: "Serverless Architecture", grade: 6 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S12",
@@ -118,6 +140,8 @@ const studentsData = [
       { name: "Automated Testing with Selenium", grade: 4 },
       { name: "Performance Testing", grade: 3 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S13",
@@ -128,6 +152,8 @@ const studentsData = [
       { name: "HTML and CSS Basics", grade: 5 },
       { name: "Responsive Web Design", grade: 6 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S14",
@@ -138,6 +164,8 @@ const studentsData = [
       { name: "Cloud Security", grade: 5 },
       { name: "Serverless Architecture", grade: 4 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S15",
@@ -148,6 +176,8 @@ const studentsData = [
       { name: "Automated Testing with Selenium", grade: 6 },
       { name: "Performance Testing", grade: 5 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S16",
@@ -158,6 +188,8 @@ const studentsData = [
       { name: "HTML and CSS Basics", grade: 4 },
       { name: "Responsive Web Design", grade: 4 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S17",
@@ -168,6 +200,8 @@ const studentsData = [
       { name: "Cloud Security", grade: 6 },
       { name: "Serverless Architecture", grade: 6 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S18",
@@ -178,6 +212,8 @@ const studentsData = [
       { name: "Automated Testing with Selenium", grade: 3 },
       { name: "Performance Testing", grade: 4 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S19",
@@ -188,6 +224,8 @@ const studentsData = [
       { name: "HTML and CSS Basics", grade: 5 },
       { name: "Responsive Web Design", grade: 5 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
   {
     id: "S20",
@@ -198,6 +236,8 @@ const studentsData = [
       { name: "Cloud Security", grade: 5 },
       { name: "Serverless Architecture", grade: 6 },
     ],
+    description:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.s",
   },
 ];
 
