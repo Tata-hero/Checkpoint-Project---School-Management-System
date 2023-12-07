@@ -34,18 +34,7 @@ function classesCards() {
 }
 
 function classesPage() {
-  const classesHeadingTemplate = classesPageTemplate.createClassesHeading();
-  const classesAddBtn = classesPageTemplate.createAddButton();
-
-  const classesRowTemplate = classesPageTemplate.createClassesRow(
-    classesCards()
-  );
-
-  const classesContainerTemplate = classesPageTemplate.createClassesContainer(
-    classesHeadingTemplate + classesRowTemplate + classesAddBtn
-  );
-
-  render(classesContainerTemplate);
+  render(classesPageTemplate.createClassesPage(classesCards()));
 }
 
 function teachersCards() {

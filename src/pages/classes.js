@@ -1,12 +1,19 @@
-function createClassesHeading() {
+function createClassesPage(classesCards) {
   return `
-  <div class="mt-4 ms-5">
-    <h2>Classes</h2>
-  </div>
-  `;
+  <div class="container">
+    <div class="mt-4 ms-5">
+      <h2>Classes</h2>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+      ${classesCards}
+    </div>
+    <div class="text-center">
+      <a class="d-block mx-auto text-primary" style="font-size: 4rem;"><i class="bi bi-plus-circle"></i></a>
+      <div class="">Add new Class</div>
+    </div>
+  </div>`;
 }
-
-function createClassesPage(classesData) {
+function createClassesCards(classesData) {
   return `
   <div class="col d-flex justify-content-center">
     <div class="card" style="width: 30rem;">
@@ -25,33 +32,7 @@ function createClassesPage(classesData) {
   </div>`;
 }
 
-function createAddButton() {
-  return `
-    <div class="text-center">
-      <a class="d-block mx-auto text-primary" style="font-size: 4rem;"><i class="bi bi-plus-circle"></i></a>
-      <div class="">Add new Class</div>
-    </div>
-  `;
-}
-function createClassesRow(contentT) {
-  return `
-    <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
-      ${contentT}
-    </div>
-  `;
-}
-
-function createClassesContainer(content) {
-  return `
-    <div class="container">
-      ${content}
-    </div>`;
-}
-
 export default {
-  createClassesHeading,
   createClassesPage,
-  createAddButton,
-  createClassesRow,
-  createClassesContainer,
+  createClassesCards,
 };
