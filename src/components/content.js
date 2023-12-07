@@ -55,7 +55,7 @@ function teachersCards() {
 }
 
 function teachersPage() {
-  render(teachersPageTemplate.techersPage(teachersCards()));
+  render(teachersPageTemplate.createTechersPage(teachersCards()));
 }
 
 function render(content) {

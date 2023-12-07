@@ -1,4 +1,4 @@
-function techersPage(teachersCards) {
+function createTechersPage(teachersCards) {
   return `
   <div class="container">
     <div class="mt-4 ms-5">
@@ -34,6 +34,6 @@ function createTeachersCards(teachersData) {
 }
 
 export default {
-  techersPage,
+  createTechersPage,
   createTeachersCards,
 };
