@@ -29,7 +29,7 @@ function countClasses() {
 
 function classesCards() {
   return classesData
-    .map((data) => classesPageTemplate.createClassesPage(data))
+    .map((data) => classesPageTemplate.createClassesCards(data))
     .join("");
 }
 
