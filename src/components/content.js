@@ -3,6 +3,7 @@ import studentsData from "../LMS_data/students_data.js";
 import teachersData from "../LMS_data/teachers_data.js";
 import classesData from "../LMS_data/classes_data.js";
 import classesPageTemplate from "../pages/classes.js";
+import teachersPageTemplate from "../pages/teachers.js";
 
 function homePage() {
   render(homePageTemplate());
@@ -47,6 +48,16 @@ function classesPage() {
   render(classesContainerTemplate);
 }
 
+function teachersCards() {
+  return teachersData
+    .map((data) => teachersPageTemplate.createTeachersCards(data))
+    .join("");
+}
+
+function teachersPage() {
+  render(teachersPageTemplate.techersPage(teachersCards()));
+}
+
 function render(content) {
   document.querySelector(".main").innerHTML = content;
 }
@@ -54,5 +65,6 @@ function render(content) {
 export default {
   homePage,
   classesPage,
+  teachersPage,
   render,
 };
