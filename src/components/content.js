@@ -50,8 +50,24 @@ function teachersPage() {
 
 function studentsCards() {
   return studentsData
-    .map((data) => studentsPageTemplate.createStudentsCards(data))
+    .map((student) =>
+      studentsPageTemplate.createStudentsCards(
+        student,
+        calculateAverageGrade(student)
+      )
+    )
     .join("");
+}
+
+function calculateAverageGrade(student) {
+  const totalGrades = student.subjects.reduce(
+    (sum, subject) => sum + subject.grade,
+    0
+  );
+  const averageGrade = totalGrades / student.subjects.length;
+  const roundedAverage = averageGrade.toFixed(1);
+
+  return roundedAverage;
 }
 
 function studentsPage() {
