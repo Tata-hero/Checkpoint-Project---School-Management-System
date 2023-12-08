@@ -1,26 +1,37 @@
 export default function addStudentModalWindow() {
   return `
-    <div class="container mt-5">
-    <h2 class="mb-4">Student Information Form</h2>
-    <form id="studentForm">
-      <div class="form-group">
-        <label for="studentName">Name:</label>
-        <input type="text" class="form-control" id="studentName" placeholder="Enter student name" required>
+    <div class="modal fade" id="studentForm" tabindex="-1" aria-labelledby="studentFormLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="studentFormLabel">Student Information Form</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="studentForm">
+              <div class="form-group">
+                <label for="studentName">Name:</label>
+                <input type="text" class="form-control mt-2" id="studentName" placeholder="Enter student first and last name" required>
+              </div>
+              <div class="form-group mt-3">
+                <label for="classSelect">Class:</label>
+                <select class="form-control mt-2" id="classSelect" required>
+                  <option value="Software Testing">Software Testing</option>
+                  <option value="Fullstack Web Programmin g">Fullstack Web Programming</option>
+                  <option value="AWS Cloud Engineering">AWS Cloud Engineering</option>
+                </select>
+              </div>
+              <div class="form-group mt-3">
+                <label for="description">Description:</label>
+                <textarea class="form-control mt-2" id="description" placeholder="Enter student description"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="addNewStudent">Submit</button>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="classSelect">Class:</label>
-        <select class="form-control" id="classSelect" required>
-          <option value="Software Testing">Software Testing</option>
-          <option value="Fullstack Web Programming">Fullstack Web Programming</option>
-          <option value="AWS Cloud Engineering">AWS Cloud Engineering</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="description">Description:</label>
-        <textarea class="form-control" id="description" placeholder="Enter student description"></textarea>
-      </div>
-      <button type="button" class="btn btn-primary" id="addNewStudent">Submit</button>
-    </form>
-  </div>
+    </div>
 `;
 }
