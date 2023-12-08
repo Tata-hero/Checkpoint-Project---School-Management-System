@@ -5,6 +5,7 @@ import classesData from "../LMS_data/classes_data.js";
 import classesPageTemplate from "../pages/classes.js";
 import teachersPageTemplate from "../pages/teachers.js";
 import studentsPageTemplate from "../pages/students.js";
+import studentModalWindow from "./modalWindows/studentsModal/studentsModal.template.js";
 
 function homePage() {
   render(homePageTemplate());
@@ -72,10 +73,17 @@ function calculateAverageGrade(student) {
 
 function studentsPage() {
   render(studentsPageTemplate.createStudentsPage(studentsCards()));
+  renderModalWindows(studentModalWindow());
 }
 
 function render(content) {
   document.querySelector(".main").innerHTML = content;
+}
+
+function renderModalWindows(modalWindow) {
+  return document
+    .querySelector(".wrapper")
+    .insertAdjacentHTML("afterend", modalWindow);
 }
 
 export default {
