@@ -8,8 +8,8 @@ function createStudentsPage(studentsCards) {
       ${studentsCards}
     </div>
     <div class="text-center">
-      <a class="d-block mx-auto text-primary" style="font-size: 4rem;"><i class="bi bi-plus-circle"></i></a>
-      <div class="">Add new Student</div>
+      <a class="d-block mx-auto text-primary" id="addStudentBtn" data-bs-toggle="modal" data-bs-target="#studentForm" style="font-size: 4rem;"><i class="bi bi-plus-circle"></i></a>
+      <div>Add new Student</div>
     </div>
   </div>`;
 }
