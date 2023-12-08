@@ -25,6 +25,9 @@ function addEventListener() {
       case "menu-teachers":
         pagesContent.teachersPage();
         break;
+      case "menu-students":
+        pagesContent.studentsPage();
+        break;
       default:
         console.log("this page is not created yet.");
     }
