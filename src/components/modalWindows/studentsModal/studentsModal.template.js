@@ -8,7 +8,7 @@ export default function addStudentModalWindow() {
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form id="studentForm">
+            <form id="studentForms">
               <div class="form-group">
                 <label for="studentName">Name:</label>
                 <input type="text" class="form-control mt-2" id="studentName" placeholder="Enter student first and last name" required>
@@ -28,7 +28,7 @@ export default function addStudentModalWindow() {
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" id="addNewStudent">Submit</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="addNewStudent">Submit</button>
           </div>
         </div>
       </div>
