@@ -1,10 +1,15 @@
-const addButton = document.getElementById("addNewStudent");
+import addStudentModalWindow from "./studentsModal.template.js";
 
-addButton.addEventListener("click", function (e) {
-  handleAddStudent();
-});
+function setupStudentModalFunctionality(studentsData) {
+  const submitButton = document.querySelector("#addNewStudent");
 
-function handleAddStudent() {
+  submitButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    handleAddStudent(studentsData);
+  });
+}
+
+function handleAddStudent(studentsData) {
   if (localStorage.getItem("allStudents") === null) {
     localStorage.setItem("allStudents", JSON.stringify(studentsData));
   }
@@ -15,7 +20,7 @@ function handleAddStudent() {
   const description = document.getElementById("description").value;
 
   const newStudent = {
-    id: (studentsData.length + 1 + 100).toString(), // Generate a unique ID (simple example)
+    id: (studentsData.length + 1 + 1000).toString(),
     name: studentName,
     class: selectedClass,
     subjects: [],
@@ -23,7 +28,7 @@ function handleAddStudent() {
   };
 
   const studentsFromStorage = getItemFromStorage("allStudents");
-  if (!studentsFromStorage.includes(newStudent)) {
+  if (!studentsFromStorage.includes(newStudent.name)) {
     studentsFromStorage.push(newStudent);
   }
 
@@ -38,3 +43,5 @@ function getItemFromStorage(pKey) {
 function setItemToStorage(pKey, value) {
   localStorage.setItem(pKey, JSON.stringify(value));
 }
+
+export default { addStudentModalWindow, setupStudentModalFunctionality };
