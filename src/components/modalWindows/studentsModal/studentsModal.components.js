@@ -81,7 +81,9 @@ function resetForm(studentNameInput, classSelectInput, descriptionInput) {
 }
 
 export default {
+  getFormElements,
   addStudentModalWindow,
   setupStudentModalFunctionality,
-  getFormElements,
+  getItemFromStorage,
+  setItemToStorage,
 };

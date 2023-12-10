@@ -50,6 +50,10 @@ function teachersPage() {
 }
 
 function studentsCards() {
+  const storedStudentsData =
+    studentModalWindow.getItemFromStorage("allStudents");
+  const studentsData = storedStudentsData ? storedStudentsData : [];
+
   return studentsData
     .map((student) =>
       studentsPageTemplate.createStudentsCards(
