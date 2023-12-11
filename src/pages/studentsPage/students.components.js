@@ -56,7 +56,7 @@ function handleAddStudent() {
     id: (studentsFromStorage.length + 1 + 1000).toString(),
     name: studentName,
     class: selectedClass,
-    subjects: [],
+    subjects: studentModalWindow.getSubjectsForClass(selectedClass),
     description: description,
   };
 
