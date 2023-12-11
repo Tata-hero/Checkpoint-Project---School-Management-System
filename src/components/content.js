@@ -1,17 +1,10 @@
 import homePageTemplate from "../pages/home.js";
-import studentsData from "../LMS_data/students_data.js";
+
 import teachersData from "../LMS_data/teachers_data.js";
 import classesData from "../LMS_data/classes_data.js";
 import classesPageTemplate from "../pages/classes.js";
 import teachersPageTemplate from "../pages/teachers.js";
-import studentsPageTemplate from "../pages/students.js";
-import studentModalWindow from "./modalWindows/studentsModal/studentsModal.components.js";
-
-function updateStudentsData() {
-  const storedStudentsData =
-    studentModalWindow.getItemFromStorage("allStudents") || [];
-  return storedStudentsData;
-}
+import studentsPageComponents from "../pages/studentsPage/students.components.js";
 
 function homePage() {
   render(homePageTemplate());
@@ -55,32 +48,10 @@ function teachersPage() {
   render(teachersPageTemplate.createTechersPage(teachersCards()));
 }
 
-function studentsCards() {
-  return updateStudentsData()
-    .map((student) =>
-      studentsPageTemplate.createStudentsCards(
-        student,
-        calculateAverageGrade(student)
-      )
-    )
-    .join("");
-}
-
-function calculateAverageGrade(student) {
-  const totalGrades = student.subjects.reduce(
-    (sum, subject) => sum + subject.grade,
-    0
-  );
-  const averageGrade = totalGrades / student.subjects.length;
-  const roundedAverage = averageGrade.toFixed(1);
-
-  return roundedAverage;
-}
-
 function studentsPage() {
-  render(studentsPageTemplate.createStudentsPage(studentsCards()));
-  renderModalWindows(studentModalWindow.addStudentModalWindow());
-  studentModalWindow.setupStudentModalFunctionality(studentsData);
+  render(studentsPageComponents.displayStudentsPage());
+  renderModalWindows(studentsPageComponents.addStudentModalWindow());
+  studentsPageComponents.studentModalFunctionality();
 }
 
 function render(content) {

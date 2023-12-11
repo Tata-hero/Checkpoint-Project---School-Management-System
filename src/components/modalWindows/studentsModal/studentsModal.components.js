@@ -1,4 +1,4 @@
-import addStudentModalWindow from "./studentsModal.template.js";
+import createStudentModalWindow from "./studentsModal.template.js";
 import pagesContent from "../../content.js";
 
 export function getFormElements() {
@@ -84,7 +84,7 @@ function resetForm(studentNameInput, classSelectInput, descriptionInput) {
 
 export default {
   getFormElements,
-  addStudentModalWindow,
+  createStudentModalWindow,
   setupStudentModalFunctionality,
   getItemFromStorage,
   setItemToStorage,
