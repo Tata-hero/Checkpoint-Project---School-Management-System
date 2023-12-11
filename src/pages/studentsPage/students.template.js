@@ -20,8 +20,8 @@ function createStudentsCards(student, calculateAverageGrade) {
     <div class="card" style="width: 30rem;">
       <div class="card-body">
         <div class="row justify-content-end">
-          <a class="col-1" style="font-size: 20px"><i class="bi bi-pencil-square"></i></a>
-          <a class="col-1" style="font-size: 20px"><i class="bi bi-trash-fill"></i></a>
+          <a class="col-1" id="${student.id}" style="font-size: 20px"><i class="bi bi-pencil-square"></i></a>
+          <a class="col-1 delete-button" id="${student.id}" style="font-size: 20px"><i class="bi bi-trash-fill"></i></a>
         </div>
         <h5 class="card-title">${student.name}</h5>
         <h6 class="card-subtitle mb-2 text-body-secondary">${student.class}</h6>

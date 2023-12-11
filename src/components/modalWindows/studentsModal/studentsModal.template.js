@@ -1,4 +1,4 @@
-export default function addStudentModalWindow() {
+export default function createStudentModalWindow() {
   return `
     <div class="modal fade" id="studentForm" tabindex="-1" aria-labelledby="studentFormLabel" aria-hidden="true">
       <div class="modal-dialog">

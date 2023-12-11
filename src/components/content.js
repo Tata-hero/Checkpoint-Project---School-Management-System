@@ -15,7 +15,9 @@ function homePage() {
 
 function countStudents() {
   const studentCounter = document.querySelector(".counter_students");
-  studentCounter.innerHTML = updateStudentsData().length.toString();
+  studentCounter.innerHTML = studentsPageComponents
+    .updateStudentsData()
+    .length.toString();
 }
 
 function countTeachers() {
@@ -52,6 +54,7 @@ function studentsPage() {
   render(studentsPageComponents.displayStudentsPage());
   renderModalWindows(studentsPageComponents.addStudentModalWindow());
   studentsPageComponents.studentModalFunctionality();
+  studentsPageComponents.handleDeleteStudentCard();
 }
 
 function render(content) {
