@@ -7,6 +7,13 @@ import teachersPageTemplate from "../pages/teachers.js";
 import studentsPageTemplate from "../pages/students.js";
 import studentModalWindow from "./modalWindows/studentsModal/studentsModal.components.js";
 
+function updateStudentsData() {
+  const storedStudentsData =
+    studentModalWindow.getItemFromStorage("allStudents");
+  const localStudentsData = storedStudentsData ? storedStudentsData : [];
+  return localStudentsData;
+}
+
 function homePage() {
   render(homePageTemplate());
   countStudents();
@@ -16,7 +23,7 @@ function homePage() {
 
 function countStudents() {
   const studentCounter = document.querySelector(".counter_students");
-  studentCounter.innerHTML = studentsData.length.toString();
+  studentCounter.innerHTML = updateStudentsData().length.toString();
 }
 
 function countTeachers() {
@@ -50,11 +57,7 @@ function teachersPage() {
 }
 
 function studentsCards() {
-  const storedStudentsData =
-    studentModalWindow.getItemFromStorage("allStudents");
-  const studentsData = storedStudentsData ? storedStudentsData : [];
-
-  return studentsData
+  return updateStudentsData()
     .map((student) =>
       studentsPageTemplate.createStudentsCards(
         student,
@@ -78,7 +81,7 @@ function calculateAverageGrade(student) {
 function studentsPage() {
   render(studentsPageTemplate.createStudentsPage(studentsCards()));
   renderModalWindows(studentModalWindow.addStudentModalWindow());
-  studentModalWindow.setupStudentModalFunctionality(studentsData);
+  studentModalWindow.setupStudentModalFunctionality(updateStudentsData());
 }
 
 function render(content) {

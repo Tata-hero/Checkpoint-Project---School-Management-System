@@ -1,11 +1,13 @@
 import addStudentModalWindow from "./studentsModal.template.js";
 
 export function getFormElements() {
+  const submitButton = document.querySelector("#addNewStudent");
   const studentNameInput = document.getElementById("studentName");
   const classSelectInput = document.getElementById("classSelect");
   const descriptionInput = document.getElementById("description");
 
   return {
+    submitButton,
     studentNameInput,
     classSelectInput,
     descriptionInput,
@@ -13,10 +15,8 @@ export function getFormElements() {
 }
 
 function setupStudentModalFunctionality(studentsData) {
-  const { studentNameInput, classSelectInput, descriptionInput } =
+  const { submitButton, studentNameInput, classSelectInput, descriptionInput } =
     getFormElements();
-
-  const submitButton = document.querySelector("#addNewStudent");
 
   submitButton.addEventListener("click", (event) => {
     event.preventDefault();
@@ -45,15 +45,16 @@ function handleAddStudent(
     classSelectInput.options[classSelectInput.selectedIndex].value;
   const description = descriptionInput.value;
 
+  const studentsFromStorage = getItemFromStorage("allStudents");
+
   const newStudent = {
-    id: (studentsData.length + 1 + 1000).toString(),
+    id: (studentsFromStorage.length + 1 + 1000).toString(),
     name: studentName,
     class: selectedClass,
     subjects: [],
     description: description,
   };
 
-  const studentsFromStorage = getItemFromStorage("allStudents");
   if (
     !studentsFromStorage.some((student) => student.name === newStudent.name)
   ) {
@@ -61,8 +62,6 @@ function handleAddStudent(
   }
 
   setItemToStorage("allStudents", studentsFromStorage);
-
-  studentsData.push(newStudent);
 }
 
 function getItemFromStorage(pKey) {
