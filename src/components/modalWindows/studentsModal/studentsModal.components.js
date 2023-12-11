@@ -1,4 +1,5 @@
 import addStudentModalWindow from "./studentsModal.template.js";
+import pagesContent from "../../content.js";
 
 export function getFormElements() {
   const submitButton = document.querySelector("#addNewStudent");
@@ -62,6 +63,8 @@ function handleAddStudent(
   }
 
   setItemToStorage("allStudents", studentsFromStorage);
+
+  pagesContent.studentsPage();
 }
 
 function getItemFromStorage(pKey) {

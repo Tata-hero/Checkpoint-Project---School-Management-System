@@ -9,9 +9,8 @@ import studentModalWindow from "./modalWindows/studentsModal/studentsModal.compo
 
 function updateStudentsData() {
   const storedStudentsData =
-    studentModalWindow.getItemFromStorage("allStudents");
-  const localStudentsData = storedStudentsData ? storedStudentsData : [];
-  return localStudentsData;
+    studentModalWindow.getItemFromStorage("allStudents") || [];
+  return storedStudentsData;
 }
 
 function homePage() {
@@ -81,7 +80,7 @@ function calculateAverageGrade(student) {
 function studentsPage() {
   render(studentsPageTemplate.createStudentsPage(studentsCards()));
   renderModalWindows(studentModalWindow.addStudentModalWindow());
-  studentModalWindow.setupStudentModalFunctionality(updateStudentsData());
+  studentModalWindow.setupStudentModalFunctionality(studentsData);
 }
 
 function render(content) {
