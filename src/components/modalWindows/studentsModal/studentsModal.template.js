@@ -17,7 +17,7 @@ export default function createStudentModalWindow() {
                 <label for="classSelect">Class:</label>
                 <select class="form-control mt-2" id="classSelect" required>
                   <option value="Software Testing">Software Testing</option>
-                  <option value="Fullstack Web Programmin g">Fullstack Web Programming</option>
+                  <option value="Fullstack Web Programming">Fullstack Web Programming</option>
                   <option value="AWS Cloud Engineering">AWS Cloud Engineering</option>
                 </select>
               </div>

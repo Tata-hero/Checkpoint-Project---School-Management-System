@@ -34,7 +34,10 @@ function addStudentModalWindow() {
 }
 
 function studentModalFunctionality() {
-  return studentModalWindow.setupStudentModalFunctionality(handleAddStudent);
+  return studentModalWindow.setupStudentModalFunctionality(
+    handleAddStudent,
+    handleEditStudent
+  );
 }
 
 if (localStorage.getItem("allStudents") === null) {
@@ -94,6 +97,54 @@ function handleDeleteStudentCard() {
   });
 }
 
+function displayStudentInformation() {
+  const studentsContainer = document.querySelector(".main");
+
+  studentsContainer.addEventListener("click", function (e) {
+    studentModalWindow.getStudentFormInformation(
+      e,
+      getItemFromStorage,
+      getStudentIndexById
+    );
+  });
+}
+
+function handleEditStudent() {
+  const { submitButton, studentNameInput, classSelectInput, descriptionInput } =
+    studentModalWindow.getFormElements();
+
+  const editedStudentName = studentNameInput.value;
+  const editedClass =
+    classSelectInput.options[classSelectInput.selectedIndex].value;
+  const editedDescription = descriptionInput.value;
+
+  const studentsFromStorage = getItemFromStorage("allStudents");
+  const editedStudentId = parseInt(
+    submitButton.getAttribute("data-student-id"),
+    10
+  );
+
+  const editedStudentIndex = getStudentIndexById(editedStudentId.toString());
+  if (editedStudentIndex !== -1) {
+    const editedStudent =
+      studentsFromStorage[getStudentIndexById(editedStudentId.toString())];
+    editedStudent.name = editedStudentName;
+    editedStudent.class = editedClass;
+    editedStudent.description = editedDescription;
+
+    setItemToStorage("allStudents", studentsFromStorage);
+    pagesContent.studentsPage();
+  }
+}
+
+function setCurrentActionForAddBtn() {
+  const addButton = document.querySelector("#addStudentBtn");
+
+  addButton.addEventListener("click", function () {
+    studentModalWindow.setCurrentAction("add");
+  });
+}
+
 function getStudentIndexById(studentId) {
   const studentsFromStorage = getItemFromStorage("allStudents");
 
@@ -123,5 +174,7 @@ export default {
   addStudentModalWindow,
   studentModalFunctionality,
   handleDeleteStudentCard,
+  displayStudentInformation,
   updateStudentsData,
+  setCurrentActionForAddBtn,
 };

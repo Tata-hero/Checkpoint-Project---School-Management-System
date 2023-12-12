@@ -20,7 +20,7 @@ function createStudentsCards(student, calculateAverageGrade) {
     <div class="card" style="width: 30rem;">
       <div class="card-body">
         <div class="row justify-content-end">
-          <a class="col-1" id="${student.id}" style="font-size: 20px"><i class="bi bi-pencil-square"></i></a>
+          <a class="col-1 edit-button" data-bs-toggle="modal" data-bs-target="#studentForm" id="${student.id}" data-action="edit" style="font-size: 20px"><i class="bi bi-pencil-square"></i></a>
           <a class="col-1 delete-button" id="${student.id}" style="font-size: 20px"><i class="bi bi-trash-fill"></i></a>
         </div>
         <h5 class="card-title">${student.name}</h5>

@@ -14,15 +14,60 @@ export function getFormElements() {
   };
 }
 
-function setupStudentModalFunctionality(handleAddStudent) {
+let currentAction = "add";
+
+function setupStudentModalFunctionality(handleAddStudent, handleEditStudent) {
   const { submitButton, studentNameInput, classSelectInput, descriptionInput } =
     getFormElements();
 
-  submitButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    handleAddStudent();
+  submitButton.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (currentAction === "add") {
+      handleAddStudent();
+    } else if (currentAction === "edit") {
+      handleEditStudent();
+    }
+
     resetForm(studentNameInput, classSelectInput, descriptionInput);
   });
+}
+
+function getStudentFormInformation(e, getItemFromStorage, getStudentIndexById) {
+  const { submitButton, studentNameInput, classSelectInput, descriptionInput } =
+    getFormElements();
+
+  if (
+    e.target.classList.contains("edit-button") ||
+    e.target.closest(".edit-button")
+  ) {
+    setCurrentAction("edit");
+
+    const studentId = e.target.id;
+
+    const studentsFromStorage = getItemFromStorage("allStudents");
+    const student = studentsFromStorage[getStudentIndexById(studentId)];
+
+    studentNameInput.value = student.name || "";
+    descriptionInput.value = student.description || "";
+    setSelectedOption(classSelectInput, student.class);
+
+    submitButton.setAttribute("data-student-id", studentId);
+  }
+}
+
+function setSelectedOption(selectElement, value) {
+  for (let i = 0; i < selectElement.options.length; i++) {
+    if (selectElement.options[i].value === value) {
+      selectElement.selectedIndex = i;
+      break;
+    }
+  }
+}
+
+function setCurrentAction(action) {
+  console.log("Current Action:", action);
+  return (currentAction = action);
 }
 
 function getSubjectsForClass(selectedClass) {
@@ -63,5 +108,8 @@ export default {
   getFormElements,
   createStudentModalWindow,
   setupStudentModalFunctionality,
+  setCurrentAction,
   getSubjectsForClass,
+  resetForm,
+  getStudentFormInformation,
 };

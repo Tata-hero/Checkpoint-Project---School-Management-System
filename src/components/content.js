@@ -55,6 +55,8 @@ function studentsPage() {
   renderModalWindows(studentsPageComponents.addStudentModalWindow());
   studentsPageComponents.studentModalFunctionality();
   studentsPageComponents.handleDeleteStudentCard();
+  studentsPageComponents.displayStudentInformation();
+  studentsPageComponents.setCurrentActionForAddBtn();
 }
 
 function render(content) {
