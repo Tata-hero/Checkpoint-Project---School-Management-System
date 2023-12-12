@@ -80,20 +80,28 @@ function handleDeleteStudentCard() {
       e.target.closest(".delete-button")
     ) {
       const studentId = e.target.id;
-      const studentsFromStorage = getItemFromStorage("allStudents");
 
-      const studentIndexForDeletion = studentsFromStorage.findIndex(
-        (student) => student.id === studentId
-      );
+      getStudentIndexById(studentId);
 
-      if (studentIndexForDeletion !== -1) {
-        studentsFromStorage.splice(studentIndexForDeletion, 1);
+      if (getStudentIndexById(studentId) !== -1) {
+        const studentsFromStorage = getItemFromStorage("allStudents");
+        studentsFromStorage.splice(getStudentIndexById(studentId), 1);
         setItemToStorage("allStudents", studentsFromStorage);
       }
 
       pagesContent.studentsPage();
     }
   });
+}
+
+function getStudentIndexById(studentId) {
+  const studentsFromStorage = getItemFromStorage("allStudents");
+
+  const studentIndex = studentsFromStorage.findIndex(
+    (student) => student.id === studentId
+  );
+
+  return studentIndex;
 }
 
 function updateStudentsData() {
