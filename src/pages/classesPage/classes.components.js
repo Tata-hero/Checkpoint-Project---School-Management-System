@@ -110,14 +110,14 @@ function handleEditClass() {
     submitButton.getAttribute("data-class-id"),
     10
   );
-
+  console.log(editedClassId);
   const editedClassIndex = getClassIndexById(editedClassId.toString());
+  console.log(editedClassIndex);
   if (editedClassIndex !== -1) {
-    const editedClass =
-      classesFromStorage[getClassIndexById(editedClassId.toString())];
-    editedClass.name = editedClassName;
-    editedClass.teacher = editedTeacherName;
-    editedClass.classDescription = editedClassDescription;
+    const editedClass = classesFromStorage[editedClassIndex];
+    editedClass.className = editedClassName;
+    editedClass.teacherName = editedTeacherName;
+    editedClass.description = editedClassDescription;
 
     setItemToStorage("allClasses", classesFromStorage);
     pagesContent.classesPage();

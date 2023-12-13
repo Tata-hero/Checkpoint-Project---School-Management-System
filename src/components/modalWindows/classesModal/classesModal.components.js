@@ -57,7 +57,7 @@ function getClassFormInformation(e, getItemFromStorage, getClassIndexById) {
     const classItem = classesFromStorage[getClassIndexById(classId)];
 
     classNameInput.value = classItem.className || "";
-    teacherNameInput.value = classItem.teacher.name;
+    teacherNameInput.value = classItem.teacherName;
     classDescriptionInput.value = classItem.description || "";
 
     submitButton.setAttribute("data-class-id", classId);
