@@ -31,8 +31,6 @@ function createTeachersCards(teacher) {
         <h5 class="card-title">${teacher.name}</h5>
         <h6 class="card-subtitle mb-2 text-body-secondary">${teacher.class}</h6>
         <p class="card-text">${teacher.description}</p>
-        <a href="#" class="card-link">Students</a>
-        <a href="#" class="card-link">Teachers</a>
       </div>
     </div>
   </div>`;
