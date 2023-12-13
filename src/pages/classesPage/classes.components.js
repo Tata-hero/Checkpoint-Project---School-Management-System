@@ -46,7 +46,9 @@ function handleAddClass() {
   };
 
   if (
-    !classesFromStorage.some((classItem) => classItem.name === newClass.name)
+    !classesFromStorage.some(
+      (classItem) => classItem.className === newClass.className
+    )
   ) {
     classesFromStorage.push(newClass);
   }

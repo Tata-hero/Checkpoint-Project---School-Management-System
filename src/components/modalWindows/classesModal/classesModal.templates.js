@@ -14,11 +14,11 @@ export default function createClassesModalWindow() {
                 <input type="text" class="form-control mt-2" id="className" placeholder="Enter a class name" required>
               </div>
               <div class="form-group mt-3">
-                <label for="classSelect">Teacher:</label>
+                <label for="teacherName">Teacher:</label>
                 <input type="text" class="form-control mt-2" id="teacherName" placeholder="Enter the teacher name" required>
               </div>
               <div class="form-group mt-3">
-                <label for="description">Description:</label>
+                <label for="classDescription">Description:</label>
                 <textarea class="form-control mt-2" id="classDescription" placeholder="Enter class description"></textarea>
               </div>
             </form>
