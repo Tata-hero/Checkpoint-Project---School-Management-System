@@ -1,8 +1,4 @@
 import homePageTemplate from "../pages/home.js";
-
-import teachersData from "../LMS_data/teachers_data.js";
-import classesData from "../LMS_data/classes_data.js";
-import teachersPageTemplate from "../pages/teachersPage/teachers.templates.js";
 import studentsPageComponents from "../pages/studentsPage/students.components.js";
 import classesPageComponents from "../pages/classesPage/classes.components.js";
 import teachersPageComponents from "../pages/teachersPage/teachers.components.js";
@@ -38,6 +34,9 @@ function countTeachers() {
 function classesPage() {
   render(classesPageComponents.displayClassesPage());
   renderModalWindows(classesPageComponents.addClassModalWindow());
+  renderModalWindows(classesPageComponents.displayShowStudentsModal());
+  classesPageComponents.handleShowListOfStudents();
+  classesPageComponents.displayShowStudentsModal();
   classesPageComponents.classesModalFunctionality();
   classesPageComponents.handleDeleteClassCard();
   classesPageComponents.displayClassInformation();

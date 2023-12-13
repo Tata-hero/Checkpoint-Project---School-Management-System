@@ -2,6 +2,8 @@ import classesData from "../../LMS_data/classes_data.js";
 import classesPageTemplate from "./classes.template.js";
 import classesModalWindow from "../../components/modalWindows/classesModal/classesModal.components.js";
 import pagesContent from "../../components/content.js";
+import studentsPageComponents from "../studentsPage/students.components.js";
+import { createShowStudentsModalTemplate } from "../../components/modalWindows/classesModal/showStudentsModal.js";
 
 function classesCards() {
   return updatedClassesData()
@@ -110,9 +112,7 @@ function handleEditClass() {
     submitButton.getAttribute("data-class-id"),
     10
   );
-  console.log(editedClassId);
   const editedClassIndex = getClassIndexById(editedClassId.toString());
-  console.log(editedClassIndex);
   if (editedClassIndex !== -1) {
     const editedClass = classesFromStorage[editedClassIndex];
     editedClass.className = editedClassName;
@@ -147,6 +147,45 @@ function updatedClassesData() {
   return storedClassesData;
 }
 
+function createStudentsOfClass(classId) {
+  const classesFromStorage = getItemFromStorage("allClasses");
+  const currentClass = classesFromStorage[getClassIndexById(classId)];
+
+  const modalTitel = currentClass.className;
+
+  const studentsList = studentsPageComponents
+    .updateStudentsData()
+    .filter((student) => student.class === currentClass.className)
+    .map((student) => `<li class="list-group-item">${student.name}</li>`)
+    .join("");
+
+  return { studentsList, modalTitel };
+}
+
+function handleShowListOfStudents() {
+  const classesContainer = document.querySelector(".main");
+  classesContainer.addEventListener("click", function (e) {
+    if (
+      e.target.classList.contains("showStudents") ||
+      e.target.closest(".showStudents")
+    ) {
+      const classId = e.target.id;
+
+      const listOfStudents = document.querySelector("#listOfStudents");
+      listOfStudents.innerHTML = createStudentsOfClass(classId).studentsList;
+
+      const titleOfModal = document.querySelector("#showStudentsLabel");
+      titleOfModal.innerHTML = `Students of ${
+        createStudentsOfClass(classId).modalTitel
+      } class`;
+    }
+  });
+}
+
+function displayShowStudentsModal() {
+  return createShowStudentsModalTemplate();
+}
+
 function getItemFromStorage(pKey) {
   const classesFromStorage = JSON.parse(localStorage.getItem(pKey));
   return classesFromStorage;
@@ -164,4 +203,6 @@ export default {
   displayClassInformation,
   updatedClassesData,
   setCurrentActionForAddBtn,
+  handleShowListOfStudents,
+  displayShowStudentsModal,
 };

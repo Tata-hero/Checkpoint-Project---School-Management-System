@@ -3,6 +3,7 @@ import pagesContent from "../content.js";
 
 function init() {
   getElement().innerHTML = structureOfPage();
+  pagesContent.homePage();
 }
 
 function addNavbar(contentNavbar) {

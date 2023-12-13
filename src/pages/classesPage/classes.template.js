@@ -30,8 +30,7 @@ function createClassesCards(classItem) {
         <h5 class="card-title">${classItem.className}</h5>
         <h6 class="card-subtitle mb-2 text-body-secondary">${classItem.teacherName}</h6>
         <p class="card-text">${classItem.description}</p>
-        <a href="#" class="card-link">Students</a>
-        <a href="#" class="card-link">Teachers</a>
+        <a href="#" class="card-link showStudents" id="${classItem.id}" data-bs-toggle="modal" data-bs-target="#showStudents">Students</a>
       </div>
     </div>
   </div>`;
