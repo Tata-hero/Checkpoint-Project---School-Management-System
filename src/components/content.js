@@ -2,9 +2,10 @@ import homePageTemplate from "../pages/home.js";
 
 import teachersData from "../LMS_data/teachers_data.js";
 import classesData from "../LMS_data/classes_data.js";
-import teachersPageTemplate from "../pages/teachers.js";
+import teachersPageTemplate from "../pages/teachersPage/teachers.templates.js";
 import studentsPageComponents from "../pages/studentsPage/students.components.js";
 import classesPageComponents from "../pages/classesPage/classes.components.js";
+import teachersPageComponents from "../pages/teachersPage/teachers.components.js";
 
 function homePage() {
   render(homePageTemplate());
@@ -29,7 +30,9 @@ function countStudents() {
 
 function countTeachers() {
   const teachersCounter = document.querySelector(".counter_teachers");
-  teachersCounter.innerHTML = teachersData.length.toString();
+  teachersCounter.innerHTML = teachersPageComponents
+    .updatedTeachersData()
+    .length.toString();
 }
 
 function classesPage() {
@@ -41,14 +44,13 @@ function classesPage() {
   classesPageComponents.setCurrentActionForAddBtn();
 }
 
-function teachersCards() {
-  return teachersData
-    .map((data) => teachersPageTemplate.createTeachersCards(data))
-    .join("");
-}
-
 function teachersPage() {
-  render(teachersPageTemplate.createTechersPage(teachersCards()));
+  render(teachersPageComponents.displayTeachersPage());
+  renderModalWindows(teachersPageComponents.addTeacherModalWindow());
+  teachersPageComponents.teachersModalFunctionality();
+  teachersPageComponents.handleDeleteTeacherCard();
+  teachersPageComponents.displayTeacherInformation();
+  teachersPageComponents.setCurrentActionForAddBtn();
 }
 
 function studentsPage() {

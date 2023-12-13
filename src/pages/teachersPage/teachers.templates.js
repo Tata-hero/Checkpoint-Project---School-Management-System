@@ -8,7 +8,7 @@ function createTechersPage(teachersCards) {
       ${teachersCards}
     </div>
     <div class="text-center">
-      <a class="d-block mx-auto text-primary" style="font-size: 4rem;"><i class="bi bi-plus-circle"></i></a>
+      <a href="#" class="d-block mx-auto text-primary" id="addTeacherBtn" data-bs-toggle="modal" data-bs-target="#teachersForm" style="font-size: 4rem;"><i class="bi bi-plus-circle"></i></a>
       <div class="">Add new Teacher</div>
     </div>
   </div>`;
