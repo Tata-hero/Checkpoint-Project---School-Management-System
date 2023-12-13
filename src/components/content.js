@@ -2,15 +2,22 @@ import homePageTemplate from "../pages/home.js";
 
 import teachersData from "../LMS_data/teachers_data.js";
 import classesData from "../LMS_data/classes_data.js";
-import classesPageTemplate from "../pages/classes.js";
 import teachersPageTemplate from "../pages/teachers.js";
 import studentsPageComponents from "../pages/studentsPage/students.components.js";
+import classesPageComponents from "../pages/classesPage/classes.components.js";
 
 function homePage() {
   render(homePageTemplate());
   countStudents();
   countTeachers();
   countClasses();
+}
+
+function countClasses() {
+  const classesCounter = document.querySelector(".counter_classes");
+  classesCounter.innerHTML = classesPageComponents
+    .updatedClassesData()
+    .length.toString();
 }
 
 function countStudents() {
@@ -25,19 +32,13 @@ function countTeachers() {
   teachersCounter.innerHTML = teachersData.length.toString();
 }
 
-function countClasses() {
-  const classesCounter = document.querySelector(".counter_classes");
-  classesCounter.innerHTML = classesData.length.toString();
-}
-
-function classesCards() {
-  return classesData
-    .map((data) => classesPageTemplate.createClassesCards(data))
-    .join("");
-}
-
 function classesPage() {
-  render(classesPageTemplate.createClassesPage(classesCards()));
+  render(classesPageComponents.displayClassesPage());
+  renderModalWindows(classesPageComponents.addClassModalWindow());
+  classesPageComponents.classesModalFunctionality();
+  classesPageComponents.handleDeleteClassCard();
+  classesPageComponents.displayClassInformation();
+  classesPageComponents.setCurrentActionForAddBtn();
 }
 
 function teachersCards() {
